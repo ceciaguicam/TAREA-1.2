@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Estrella Polar</title>
+</head>
+<body>
+    <h1>Haga su reserva</h1>
+    <form action="procesareserva.php" method="get">
+        <fieldset>
+            <legend>Datos personales</legend>
+            <p>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required maxlength="100" autofocus>
+            </p>
+            <p>
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" required maxlength="100">
+            </p>
+            <p>
+                <label for="DNI">DNI:</label>
+                <input type="text" id="DNI" name="DNI" required maxlength="10" placeholder="DNI con letra">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Datos de la estancia</legend>
+            <p>
+                <label for="habitacion">Tipo de habitación:</label>
+                <input type="radio" id="habitacion" name="habitacion" value="individual" checked>Individual
+                <input type="radio" id="habitacion" name="habitacion" value="doble">Doble
+                <input type="radio" id="habitacion" name="habitacion" value="triple">Triple
+            </p>
+            <p>
+                <label for="num-personas">Número de personas</label>
+                <select name="num-personas" id="num-personas">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </p>
+            <p>
+                <input type="checkbox" name="mascotas"> Llevo mascotas
+            </p>
+            <p>
+                <label for="fecha-llegada">Fecha de llegada</label>
+                <input type="date" id="fecha-llegada">
+            </p>
+            <p>
+                <label for="hora-llegada">Hora aproximada de llegada</label>
+                <input type="time" id="hora-llegada">
+            </p>
+        </fieldset>
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Borrar">
+
+    </form>
+    <br>
+
+    <a href="index.html">Volver a inicio</a>
+        
+</body>
+</html>
+
+<!--Se llamará reserva.html y tendrá las siguientes características. 
+Todos los textos de los input se asociarán el input correspondiente con 
+la etiqueta <label for=”id del input”>texto</label>
+
+
+Un botón de enviar y otro de reiniciar
+Un enlace que ponga “Volver” y que lleve la página principal index.html
+Los datos se enviarían a un archivo llamado “procesareserva.php” por el 
+método “GET”.
+-->
